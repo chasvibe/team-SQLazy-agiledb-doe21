@@ -1,21 +1,28 @@
 # u04a-sql-scrum  
 
+Table of contents  
+
+- [u04a-sql-scrum](#u04a-sql-scrum)
+  - [Purpose](#purpose)
+  - [SQLazy](#sqlazy)
+  - [Agile methods](#agile-methods)
+    - [Scrum](#scrum)
+    - [Workflow](#workflow)
+  - [SQL modelling](#sql-modelling)
+    - [User entity](#user-entity)
+
+___
+
 This repo is for documentation of assignment u04a-sql-scrum.  
   
 The goal of this assignment is to design and implement a SQL database in Postgres.  
 In the design phase we've created a logical model and a physical model to visualise entities, attributes, relationships and constraints.  
 To implement the SQL schema we've used psql (CLI) and pgadmin (GUI).  
 A big part of this assignment was to learn, understand and use Scrum to manage workflows.  
-___
-Table of contents  
 
-- [u04a-sql-scrum](#u04a-sql-scrum)
-  - [SQLazy](#sqlazy)
-  - [Agile methods](#agile-methods)
-    - [Scrum](#scrum)
-    - [Workflow](#workflow)
-  - [SQL modelling](#sql-modelling)
+## Purpose  
 
+The database is going to be used by an app which has two main fuctions - a social media where users can connect to others directly via private messaging or through user-generated groups. The other part of the app is a webshop where users can buy products. Our focus group is pets and their owners.  
 ___  
 
 ## SQLazy  
@@ -26,16 +33,21 @@ Participators in creating material for this assignment is:
 &nbsp;&nbsp;&nbsp;&nbsp;Daniel _"Knapis"_ Goldmann Lapington  
 &nbsp;&nbsp;&nbsp;&nbsp;Viktor _"Scissorhands"_ Berg  
 
+___
+
 ## Agile methods  
+
+A big part of this assignment was to get to know and use Scrum as a method for Agile development.  
 
 ### Scrum  
 
-
+We've read some litterature about the basic principles of Scrum and Kanban. It has been totally new for us so the usage of Scrum has been mostly learnt by trial-and-error. The Scrum master role has rotated so each participant has got the oppurtunity to understand it.  
 
 ### Workflow  
 
 We used Trello for managing our scrum board.  
 &rarr; [Trello board](https://trello.com/b/6ckQafkt/u04)
+___
 
 ## SQL modelling  
 
@@ -43,3 +55,12 @@ This is the logical and physical model we created during the first three sprints
 Click on one of the following images to see the corresponding model in PDF format.  
 
 [<img src="./models/U04_logical_model.png" width="50%" height="50%">](./models/logical%20model.pdf)[<img src="./models/U04_physical_model.png" width="50%" height="50%">](./models/physical%20model.pdf)  
+
+### User entity  
+
+We'll guide you through the most central parts of the database and start with what is most important for us - our users.  
+
+![User entity](./models/user_entity.png)  
+The attribute _userEmail_ serves as an identifier for each user and is the _primary key_ for this entity. It's data type is _varchar_ and has a maximum character length of 320 characters including "@" and its domain. Because of userEmail's funtion as an identifier for our users it as to be _unique_.  
+The following twwo attributes - firstName and lastname are quite self explanatory. These are mandatory and should be set to _NOT NULL_.  
+The last attribute - isActive - is a boolean marker that should be set to _true_ by default. If a user misbehaves or wants to stop using this app we can set it to _false_. The user will still exist in our database but he or she will not be visible for other users, except admin.  
