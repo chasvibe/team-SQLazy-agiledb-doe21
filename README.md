@@ -12,6 +12,7 @@ Table of contents
   - [SQL usage](#sql-usage)
     - [User entity](#user-entity)
     - [User roles](#user-roles)
+  - [SQL dumps](#sql-dumps)
 
 ___
 
@@ -71,3 +72,9 @@ The last attribute - isActive - is a boolean marker that should be set to _true_
 
 Every user can be assigned to several _roles_. Due to this being a many-to-many relationship (one user can have many roles and one role can be assigned to many users) we've added a junction table called _Enrollment_ with foreign keys that relates to the the attribute _userEmail_ in the entity _User_ and the attribute _roleId_ in the entity _Roles_.  
 That means that specific roles should be added to the entity _Roles_ and a specific role is assigned to a specific user in the entity _Enrollment_.  
+
+___
+
+## SQL dumps  
+
+Database dumps are located [here](sql_dumps/).
