@@ -22,7 +22,7 @@ A big part of this assignment was to learn, understand and use Scrum to manage w
 
 ## Purpose  
 
-The database is going to be used by an app which has two main fuctions - a social media where users can connect to others directly via private messaging or through user-generated groups. The other part of the app is a webshop where users can buy products. Our focus group is pets and their owners.  
+The database is going to be used by an app which has two main functions - a social media where users can connect to others directly via private messaging or through user-generated groups. The other part of the app is a webshop where users can buy products. Our focus group is homeless pet owners.  
 ___  
 
 ## SQLazy  
@@ -64,3 +64,8 @@ We'll guide you through the most central parts of the database and start with wh
 The attribute _userEmail_ serves as an identifier for each user and is the _primary key_ for this entity. It's data type is _varchar_ and has a maximum character length of 320 characters including "@" and its domain. Because of userEmail's funtion as an identifier for our users it as to be _unique_.  
 The following twwo attributes - firstName and lastname are quite self explanatory. These are mandatory and should be set to _NOT NULL_.  
 The last attribute - isActive - is a boolean marker that should be set to _true_ by default. If a user misbehaves or wants to stop using this app we can set it to _false_. The user will still exist in our database but he or she will not be visible for other users, except admin.  
+
+![User - Roles relationship](models/user_roles.png)  
+
+Every user can be assigned to several _roles_. Due to this being a many-to-many relationship (one user can have many roles and one role can be assigned to many users) we've added a junction table called _Enrollment_ with foreign keys that relates to the the attribute _userEmail_ in the entity _User_ and the attribute _roleId_ in the entity _Roles_.  
+That means that specific roles should be added to the entity _Roles_ and a specific role is assigned to a specific user in the entity _Enrollment_
