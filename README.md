@@ -54,7 +54,9 @@ We used Trello for managing our scrum board.
 This is the logical and physical model we created during the first three sprints of this assignment. Models are created in Lucidchart.  
 Click on one of the following images to see the corresponding model in PDF format.  
 
-[<img src="./imgs/U04_logical_model.png" width="50%" height="50%">](./models/logical%20model.pdf)[<img src="./imgs/U04_physical_model.png" width="50%" height="50%">](./models/physical%20model.pdf)  
+|[Logical model](models/logical%20model.pdf)|[Physical model](models/physical%20model.pdf)|
+|---|---|
+|[![alt](imgs/U04_logical_model.png)](./models/logical%20model.pdf)|[![alt](imgs/U04_physical_model.png)](./models/physical%20model.pdf)| 
 
 ## SQL usage  
 
