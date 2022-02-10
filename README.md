@@ -25,7 +25,6 @@ A big part of this assignment was to learn, understand and use Scrum to manage w
 ## Purpose  
 
 The database is going to be used by an app which has two main functions - a social media where users can connect to others directly via private messaging or through user-generated groups. The other part of the app is a webshop where users can buy products. Our focus group is homeless pet owners.  
-___  
 
 ## SQLazy  
 
@@ -34,8 +33,6 @@ Participators in creating material for this assignment is:
 &nbsp;&nbsp;&nbsp;&nbsp;Erik _"Ejo Was Here"_ Olsson  
 &nbsp;&nbsp;&nbsp;&nbsp;Daniel _"Knapis"_ Goldmann Lapington  
 &nbsp;&nbsp;&nbsp;&nbsp;Viktor _"Scissorhands"_ Berg  
-
-___
 
 ## Agile methods  
 
@@ -49,7 +46,6 @@ We've read some litterature about the basic principles of Scrum and Kanban. It h
 
 We used Trello for managing our scrum board.  
 &rarr; [Trello board](https://trello.com/b/6ckQafkt/u04)
-___
 
 ## SQL modelling  
 
