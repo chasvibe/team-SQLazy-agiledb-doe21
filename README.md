@@ -9,7 +9,9 @@ Table of contents
     - [Scrum](#scrum)
     - [Workflow](#workflow)
   - [SQL modelling](#sql-modelling)
+  - [SQL usage](#sql-usage)
     - [User entity](#user-entity)
+    - [User roles](#user-roles)
 
 ___
 
@@ -56,16 +58,20 @@ Click on one of the following images to see the corresponding model in PDF forma
 
 [<img src="./models/U04_logical_model.png" width="50%" height="50%">](./models/logical%20model.pdf)[<img src="./models/U04_physical_model.png" width="50%" height="50%">](./models/physical%20model.pdf)  
 
-### User entity  
+## SQL usage  
 
 We'll guide you through the most central parts of the database and start with what is most important for us - our users.  
+
+### User entity  
 
 ![User entity](./models/user_entity.png)  
 The attribute _userEmail_ serves as an identifier for each user and is the _primary key_ for this entity. It's data type is _varchar_ and has a maximum character length of 320 characters including "@" and its domain. Because of userEmail's funtion as an identifier for our users it as to be _unique_.  
 The following twwo attributes - firstName and lastname are quite self explanatory. These are mandatory and should be set to _NOT NULL_.  
 The last attribute - isActive - is a boolean marker that should be set to _true_ by default. If a user misbehaves or wants to stop using this app we can set it to _false_. The user will still exist in our database but he or she will not be visible for other users, except admin.  
 
+### User roles  
+
 ![User - Roles relationship](models/user_roles.png)  
 
 Every user can be assigned to several _roles_. Due to this being a many-to-many relationship (one user can have many roles and one role can be assigned to many users) we've added a junction table called _Enrollment_ with foreign keys that relates to the the attribute _userEmail_ in the entity _User_ and the attribute _roleId_ in the entity _Roles_.  
-That means that specific roles should be added to the entity _Roles_ and a specific role is assigned to a specific user in the entity _Enrollment_
+That means that specific roles should be added to the entity _Roles_ and a specific role is assigned to a specific user in the entity _Enrollment_.  
