@@ -66,7 +66,7 @@ We'll guide you through the most central parts of the database and start with wh
 
 ![User entity](./imgs/user_entity.png)  
 The attribute _userEmail_ serves as an identifier for each user and is the _primary key_ for this entity. It's data type is _varchar_ and has a maximum character length of 320 characters including "@" and its domain. Because of userEmail's funtion as an identifier for our users it as to be _unique_.  
-The following twwo attributes - firstName and lastname are quite self explanatory. These are mandatory and should be set to _NOT NULL_.  
+The following two attributes - firstName and lastname are quite self explanatory. These are mandatory and should be set to _NOT NULL_.  
 The last attribute - isActive - is a boolean marker that should be set to _true_ by default. If a user misbehaves or wants to stop using this app we can set it to _false_. The user will still exist in our database but he or she will not be visible for other users, except admin.  
 
 ### User roles  
