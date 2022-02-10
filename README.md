@@ -41,7 +41,7 @@ A big part of this assignment was to get to know and use Scrum as a method for A
 
 ### Scrum  
 
-We've read some litterature about the basic principles of Scrum and Kanban. It has been totally new for us so the usage of Scrum has been mostly learnt by trial-and-error. The Scrum master role has rotated so each participant has got the oppurtunity to understand it.  
+We've read some litterature about the basic principles of Scrum and Kanban. It has been totally new for us so the usage of Scrum has been learnt mostly by trial-and-error. The Scrum master role has rotated so each participant has got the oppurtunity to understand it better.  
 
 ### Workflow  
 
@@ -80,4 +80,4 @@ ___
 
 ## SQL dumps  
 
-Database dumps are located [here](sql_dumps/).  
+Database dumps are located [here](sql_dumps/).
